@@ -183,6 +183,7 @@
 // obj.nest.b = 99;
 // console.log(obj);
 
+// immutable objcts
 // Object.freeze(obj):
 // cannot update/add/delete
 // if obj contain nested obj, freeze that too
@@ -215,7 +216,7 @@
 
 // 05-06-2024
 
-// let arr = []
+// let arr = [];
 // let brr = new Array();
 // let drr = new Array({ drr: { dr: "r" } });
 
@@ -239,6 +240,8 @@
 // arr.shift();
 // console.log(arr);
 
+// does not modify the orginal arr and returns a new array;
+// arr.slice(strtposi, endpos+1)
 // let slice = arr.slice(6, 7);
 // console.log("sliced: " + slice);
 
@@ -257,7 +260,9 @@
 // let err = [];
 // let frr = new Array();
 
-// err.push(obj1.a, obj1.b,obj1.c)
+// for(var key in obj1){
+//     err.push(obj1[key])
+// };
 // console.log(err);
 
 // frr.push(obj2.d,obj1.b,obj2.f)
@@ -269,7 +274,6 @@
 
 
 // **************************************************
-
 
 // let xyz = {a:1,b:2,c:3};
 // let zyx = {a:99};
@@ -289,5 +293,29 @@
 
 // ************************************************
 
+// 06-06-24
 
+// splice modifies the orginal array and returns new array;
 
+let beryShake = ["toamto","pine","milk", "grape", "carrot", "beans", "lemon", "water"];
+
+beryShake.splice(0,2);
+console.log(beryShake);
+
+beryShake.splice(1,1,"glass");
+console.log(beryShake);
+
+beryShake.splice(2,2);
+console.log(beryShake);
+
+// replacing
+beryShake.splice(2,1,"ice")
+console.log(beryShake);
+
+// adding in between, without deleting
+beryShake.splice(2,0,"berry");
+console.log(beryShake);
+
+// addind element at the end of the arr
+beryShake.splice(5,0,"candy");
+console.log(beryShake);
