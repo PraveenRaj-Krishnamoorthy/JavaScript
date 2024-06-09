@@ -19,8 +19,14 @@
 // console.log(op1);
 
 // One create method
-// op1 = Object.create(One)
+// op1 = Object.create({});
 // op1 = op1.a+op1.b+op1.c+op1.d
+// or
+// op1 = Object.create({});
+// for(var key in One){
+//     op1[key] = One[key]
+//     }
+// console.log(op1);
 // console.log(op1);
 
 // -----------------
@@ -75,6 +81,24 @@
 
 // console.log(x[xyz]);
 
+// ************************
+
+// let one = { a: 5, b: 2, c: 9, d: 7 };
+// let xyz = Object.assign({}, one)
+// let x = 'c'
+// let y = 'b'
+// let z = 'a'
+// console.log(xyz[x]);
+// console.log(xyz[y]);
+// console.log(xyz[z]);
+
+// let xy = one.c
+// let yz = one.b
+// let zx = one.c
+// console.log(xy);
+// console.log(yz);
+// console.log(zx);
+
 // ********************************************************
 //29-05-24
 // let obj = {
@@ -90,9 +114,19 @@
 // console.log(obj['a']);
 // console.log(obj['nest'][z]);
 
+// ____________________________
+// parse methos is used when json is stringified only in deep cloning 
+// let one = { a: 5, b: 2, nest: { c: 9, d: 7 } };
+// let xyz = JSON.stringify(Object(one));
+// let x = 'a'
+// xyz= JSON.parse(xyz)
+// console.log(xyz);
+// console.log(xyz[x]);
+
 // --------------
 
-// number string boolean are call by value method bcz it returns a value
+// primitive types 
+// number string boolean are call by value method bcz it is passed by value
 // let x = 5;
 // let y = x;
 // x = 10;
@@ -101,7 +135,8 @@
 
 // --------------
 
-// object, array, func are call by reference bcz returns reference number
+// non-primitive types
+// object, array, func are call by reference bcz returns reference number i.e(passed by reference number)
 // let obj1 = {a:5,nest:{b:5}};
 // let obj2 = obj1
 
@@ -112,8 +147,9 @@
 
 // ----------------
 
-// null and undefined
-//* if variable not declared or variable declared and value not assigned returns undefined
+// null and undefined and not defined
+// if variable not declared returns not defined
+//* if variable declared and value not assigned returns undefined
 //* if variable's value is set to null returns null;
 // let obj = {a:1,b:2,nest:{c:3,d:null}};
 // console.log(obj);
@@ -148,7 +184,7 @@
 
 // shallow cloning
 // if object contains nested object do not use shallow cloning
-// shallow cloning does not clone nested objects reacts as dynamic changes if usesd
+// shallow cloning does not clone nested objects reacts as dynamic changes if used
 // let orginal = {a:1,b:2};
 // let shallow = Object.assign({},orginal);
 // orginal.a = 99;
@@ -297,25 +333,25 @@
 
 // splice modifies the orginal array and returns new array;
 
-let beryShake = ["toamto","pine","milk", "grape", "carrot", "beans", "lemon", "water"];
+let beryShake = ["toamto", "pine", "milk", "grape", "carrot", "beans", "lemon", "water"];
 
-beryShake.splice(0,2);
+beryShake.splice(0, 2);
 console.log(beryShake);
 
-beryShake.splice(1,1,"glass");
+beryShake.splice(1, 1, "glass");
 console.log(beryShake);
 
-beryShake.splice(2,2);
+beryShake.splice(2, 2);
 console.log(beryShake);
 
 // replacing
-beryShake.splice(2,1,"ice")
+beryShake.splice(2, 1, "ice")
 console.log(beryShake);
 
 // adding in between, without deleting
-beryShake.splice(2,0,"berry");
+beryShake.splice(2, 0, "berry");
 console.log(beryShake);
 
 // addind element at the end of the arr
-beryShake.splice(5,0,"candy");
+beryShake.splice(5, 0, "candy");
 console.log(beryShake);
