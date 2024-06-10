@@ -115,7 +115,7 @@
 // console.log(obj['nest'][z]);
 
 // ____________________________
-// parse methos is used when json is stringified only in deep cloning 
+// parse method is used when json is stringified only in deep cloning 
 // let one = { a: 5, b: 2, nest: { c: 9, d: 7 } };
 // let xyz = JSON.stringify(Object(one));
 // let x = 'a'
@@ -148,7 +148,7 @@
 // ----------------
 
 // null and undefined and not defined
-// if variable not declared returns not defined
+// if variable not declared returns not defined/ in object it returns undefined
 //* if variable declared and value not assigned returns undefined
 //* if variable's value is set to null returns null;
 // let obj = {a:1,b:2,nest:{c:3,d:null}};
@@ -208,6 +208,11 @@
 // }
 // console.log(total);
 
+// let total = 0
+// for (var key in obj) {
+//     total += key.length
+// }
+// console.log(total);
 
 // Object.seal:
 //we can update values
@@ -276,7 +281,7 @@
 // arr.shift();
 // console.log(arr);
 
-// does not modify the orginal arr and returns a new array;
+// does not modify the orginal arr and returns a new array, creates a shallow copy of the array;
 // arr.slice(strtposi, endpos+1)
 // let slice = arr.slice(6, 7);
 // console.log("sliced: " + slice);
