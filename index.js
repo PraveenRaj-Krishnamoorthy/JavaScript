@@ -338,25 +338,161 @@
 
 // splice modifies the orginal array and returns new array;
 
-let beryShake = ["toamto", "pine", "milk", "grape", "carrot", "beans", "lemon", "water"];
+// let beryShake = ["toamto", "pine", "milk", "grape", "carrot", "beans", "lemon", "water"];
 
-beryShake.splice(0, 2);
-console.log(beryShake);
+// beryShake.splice(0, 2);
+// console.log(beryShake);
 
-beryShake.splice(1, 1, "glass");
-console.log(beryShake);
+// beryShake.splice(1, 1, "glass");
+// console.log(beryShake);
 
-beryShake.splice(2, 2);
-console.log(beryShake);
+// beryShake.splice(2, 2);
+// console.log(beryShake);
 
-// replacing
-beryShake.splice(2, 1, "ice")
-console.log(beryShake);
+// // replacing
+// beryShake.splice(2, 1, "ice")
+// console.log(beryShake);
 
-// adding in between, without deleting
-beryShake.splice(2, 0, "berry");
-console.log(beryShake);
+// // adding in between, without deleting
+// beryShake.splice(2, 0, "berry");
+// console.log(beryShake);
 
-// addind element at the end of the arr
-beryShake.splice(5, 0, "candy");
-console.log(beryShake);
+// // addind element at the end of the arr
+// beryShake.splice(5, 0, "candy");
+// console.log(beryShake);
+
+// *********************************************
+
+// 14-06-24
+
+// loop is executed line by line carefull when printing
+// break will break the loop
+// continue will skip the current iteration
+// if the code read continue it will defenitely skips the current iteration and i++ will be done
+
+// let arr = [1, 2, 3, 4, 5]
+// for(var array of arr ){
+//     console.log(array);
+// }
+
+// for (i = 0; i < arr.length; i++) {
+//     console.log(i);
+//     console.log(arr[i]);
+// }
+
+// for (var i = 0; i <= arr.length; i++) {
+//     if (arr[i] == 2) {
+//         break
+//     }
+//     console.log(arr[i]);
+// }
+
+// for (var i = 0; i <= arr.length; i++) {
+//     console.log(arr[i])
+//     if (arr[i] == 2) {
+//         break
+//     }
+// }
+
+// for (i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+//     if (arr[i] == 3) {
+//         console.log(arr[i]);
+//         continue;
+//     }
+// }
+
+// let brr = [5, 4, 7, 3, 1];
+
+// for (i = 0; i < brr.length; i++) {
+//     console.log(brr[i]);
+//     continue;
+//     if (brr[i]==7) {
+//         break;
+//     }
+// }
+
+// for (var i=0; i<brr.length; i++){
+//     if (i==2) {
+//         continue;
+//         }
+//     console.log(brr[i]);
+// }
+
+// for (i=0; i<brr.length;i++){
+//     if (brr[i]==3) {
+//         break;
+//     }
+//     console.log(brr[i]);
+// }
+
+// for (i = 0; i < brr.length; i++) {
+//     if (i == 4) {
+//         break
+//     } else {
+//         continue;
+//     }
+//     console.log(brr[i]);
+// }
+
+// *************
+// Task
+// questions:
+// op1=5+9+10+8;
+// op2=7-5 + 9-3 + 10-6 + 8-5
+// drr= [5*7, 9*3, 10*6, 8*5];
+// err=[{a:88}, {a:33}, {a:77}, {a:11}, {a:66}];
+// frr=[88+7,33+3,77+6,11+5,66+0,44+0]
+
+
+// arr = [5, 9, 10, 8];
+// brr = [7, 3, 6, 5];
+// crr = [88, 33, 77, 11, 66, 44];
+// op1 = 0
+// op2 = 0
+// drr = []
+// err = []
+// frr = []
+
+
+// for (i = 0; i < arr.length; i++) {
+//     op1 += arr[i]
+// }
+// console.log(op1);
+
+// for (i = 0; i < arr.length; i++) {
+//     if (arr[i] > brr[i]) {
+//         op2 += arr[i] - brr[i]
+//     }
+//     else if (brr[i] > arr[i]) {
+//         op2 += brr[i] - arr[i]
+//     }
+// }
+// console.log(op2);
+
+// for (i = 0; i < 4; i++) {
+//     drr.push(arr[i] * brr[i])
+// }
+// console.log(drr);
+
+// for (i = 0; i < 5; i++) {
+//     err.push({ a: crr[i] })
+// }
+// console.log(err);
+
+// for (i = 0; i < 6; i++) {
+//     if (brr.length != crr.length) {
+//         brr.push(0)
+//     }
+//     console.log(crr[i] + brr[i]);
+// }
+// console.log(brr);
+// OR
+// for (let i = 0; i < 6; i++) {
+//     // check for > or = to
+//     if (i >= brr.length) {
+//         brr.push(0)
+//     }
+//     console.log(crr[i] + brr[i]);
+// }
+// console.log(brr);
