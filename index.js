@@ -115,7 +115,7 @@
 // console.log(obj['nest'][z]);
 
 // ____________________________
-// parse method is used when json is stringified only in deep cloning 
+// parse method is used when json is stringified only in deep cloning
 // let one = { a: 5, b: 2, nest: { c: 9, d: 7 } };
 // let xyz = JSON.stringify(Object(one));
 // let x = 'a'
@@ -125,7 +125,7 @@
 
 // --------------
 
-// primitive types 
+// primitive types
 // number string boolean are call by value method bcz it is passed by value
 // let x = 5;
 // let y = x;
