@@ -496,3 +496,75 @@
 //     console.log(crr[i] + brr[i]);
 // }
 // console.log(brr);
+
+// ****************************
+
+// function is a set of code that is executed when the function is called
+
+// function add(a, b) {
+//     let add = a + b
+//     sub(a, b)
+//     console.log(add);
+// }
+// function sub(x, y) {
+//     let sub = x - y
+//     mul(x, y)
+//     console.log(sub);
+// }
+// function mul(q, w) {
+//     let mul = q * w
+//     console.log(mul);
+// }
+
+// add(5, 2);
+
+// ***********************
+
+// task
+// 12,8,20,5
+
+// ONE
+// function add(a, b) {
+//     let add = a + b;
+//     console.log(add);
+//     sub(a, b)
+// }
+// function sub(x, y) {
+//     let sub = x - y
+//     console.log(sub);
+//     mul(x, y)
+// }
+// function mul(i, j) {
+//     let mul = i * j
+//     console.log(mul);
+//     div(i, j)
+// }
+// function div(o, p) {
+//     let div = o / p
+//     console.log(div);
+// }
+// add(10, 2)
+
+
+// TWO
+
+// function add(a, b) {
+//     let add = a + b;
+//     console.log(b + a);
+//     sub(b, a)
+// }
+// function sub(x, y) {
+//     let sub = x - y
+//     console.log(sub);
+//     mul(x, y)
+// }
+// function mul(i, j) {
+//     let mul = i * j
+//     console.log(mul);
+//     div(i, j)
+// }
+// function div(o, p) {
+//     let div = o / p
+//     console.log(div);
+// }
+// add(2, 10)
