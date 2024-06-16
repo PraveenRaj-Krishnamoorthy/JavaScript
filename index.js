@@ -497,9 +497,15 @@
 // }
 // console.log(brr);
 
+
+
 // ****************************
 
+
+
 // function is a set of code that is executed when the function is called
+
+// Normal Function:
 
 // function add(a, b) {
 //     let add = a + b
@@ -568,3 +574,163 @@
 //     console.log(div);
 // }
 // add(2, 10)
+
+
+// 16-06-24
+
+// Return Vs Console Log:
+// return returns value to the function and behaves like BREAK it is used to stops the function and returns the first return value to the function
+// log prints value
+
+//There is some thing u need to understand in this code deeptly
+// in the below code when we call one() only the log prints but in dom Console it prints both the console.value as well return value
+// to see the return value and log.value in vs we can log(one()) the func
+// function one() {
+//     console.log(11);
+//     return (22)
+// }
+// one();
+
+// function two() {
+//     console.log(33);
+//     return (44)
+// }
+// x = two();
+// // the x will return only the return value(44) put it in dom console log
+// // but in vs code it will show both the console & return value
+// console.log(x);
+
+// *ONE
+// *
+// try in vs
+// in vs prints 11
+// *
+// try in dom console
+// in dom console prints both 11&22
+
+// function one() {
+//     console.log(11);
+//     return(22)
+// }
+// one()
+// also check console.log(one())
+
+// *TWO
+// *
+// try in vs
+// in vs prints both 33&44 bcx x
+// *
+// try in dom console
+// x returns only the return value of func two() (44)
+// function two() {
+//     console.log(33);
+//     return (44)
+// }
+// let x = two()
+// console.log(x);
+
+// *THREE
+// there is no return value, func three() has undefined value in the variable x
+// function three() {
+//     console.log(66);
+// }
+// x = three()
+// console.log(x);
+
+// *FOUR
+// normal function return method
+// function four(){
+//     return 55
+// }
+// x = four();
+// console.log(x);
+//
+
+// ------------------------------
+
+// Arrow Function
+// arrow function does not need return statement 
+// return statement is used to end the execution of the function
+
+// let z = () => 5
+// console.log(z);
+// console.log(z());
+
+// let z = () => {
+//     console.log(199);
+//     return 299;
+//     console.log(399);
+// }
+// z()
+
+// let q = () => {
+//     return 599;
+//     return 299
+//     console.log();
+// }
+// console.log(q())
+
+// return is used to end the execution of the function
+// let a = () => {
+//     return;
+// }
+// console.log(a());
+
+// returns undefined when variable is calles and returns error when dot operator is used
+// let b = () => { { a: 1 } }
+// x = b()
+// console.log(x);
+
+// let c = () => {
+//     return { b: 2 }
+// }
+// let y = c()
+// console.log(y.b);
+
+// let d = () => ({c:99});
+// console.log(d().c);
+
+
+// --------------------------
+
+// practice
+// let arr = [{ a: 1 }, { b: 2 }, { c: 3 }, { d: 4 }];
+
+// practice
+// for (var obj of arr) {
+//     console.log(key);
+//     for (var key in obj) {
+//         console.log(obj[key]);
+//     }
+// }
+
+// practice
+// for (var i = 0; i < arr.length; i++) {
+//     let obj = arr[i]
+//     for (var key in obj) {
+//         console.log(obj[key]);
+//     }
+// }
+
+// -------------------------
+// FOREACH
+
+// TASk
+
+// let arr = [{ a: 2 }, { a: 3 }, { a: 5 }, { a: 8 }];
+// let brr = [{ a: 7 }, { a: 9 }, { a: 4 }, { a: 1 }];
+// crr = [{a:2+7},{a:3+9},{a:5+4},{a:8+1}]
+// drr = [{a:7-2},{a:9-3},{a:5-4},{a:8-1}]
+// let crr = [];
+// let drr = [];
+
+// arr.forEach((obj, ind) => {
+//     if (brr[ind].a > obj.a) {
+//         // console.log(brr[ind].a);
+//         drr.push({ a: brr[ind].a - obj.a })
+//     } else if (obj.a > brr[ind].a) {
+//         drr.push({ a: obj.a - brr[ind].a });
+//     }
+//     // console.log(brr[ind].a);
+// })
+// console.log(drr);
