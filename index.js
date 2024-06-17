@@ -1,10 +1,10 @@
 // 27-05-2024
-// let One = { a: 5, b: 2, c: 9, d: 7 };
-// let Two = { e: 8, f: 3, g: 1, h: 4 };
-// let op1 = 0;
-// let op2 = 0;
-// let Three = {};
-// let Four = {};
+let One = { a: 5, b: 2, c: 9, d: 7 };
+let Two = { e: 8, f: 3, g: 1, h: 4 };
+let op1 = 0;
+let op2 = 0;
+let Three = {};
+let Four = {};
 
 // console.log(One);
 // console.log(Two);
@@ -480,6 +480,14 @@
 // }
 // console.log(err);
 
+// for (var i = 0; i < crr.length; i++) {
+//     if (brr[i] == null) {
+//         brr[i] = 0
+//     }
+//     frr.push(crr[i] + brr[i]);
+// }
+// console.log(frr);
+// OR
 // for (i = 0; i < 6; i++) {
 //     if (brr.length != crr.length) {
 //         brr.push(0)
@@ -681,6 +689,7 @@
 // x = b()
 // console.log(x);
 
+// when using object we should mention return if {} is used
 // let c = () => {
 //     return { b: 2 }
 // }
