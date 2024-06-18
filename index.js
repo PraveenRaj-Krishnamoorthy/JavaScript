@@ -657,7 +657,7 @@ let Four = {};
 // ------------------------------
 
 // Arrow Function
-// arrow function does not need return statement 
+// arrow function does not need return statement
 // return statement is used to end the execution of the function
 
 // let z = () => 5
@@ -743,3 +743,73 @@ let Four = {};
 //     // console.log(brr[ind].a);
 // })
 // console.log(drr);
+
+// ********************************
+
+// 18-06-24
+// MAP
+// map returns a new array based on the execution of the given condition
+//
+
+// let qrr = [0, 9, 8, 7, 6, 5];
+// let wrr = qrr.map((e, i, o) => {
+//     // return e * 5
+//     return e != 7
+// })
+// console.log(wrr);
+
+// returns truly
+// let err = ["a", "b", "c"];
+// let rrr = err.map((e) => {
+//     return e > 6
+// })
+// console.log(rrr);
+
+// let prr = [0, 9, 8, 7, 6, 5]
+// let orr = prr.map((e, i) => {
+//     return { a: prr[i] }
+// })
+// console.log(orr);
+
+// FILTER
+// filter returns a new array
+// filter will check all the elements with the given condition
+// and returns all the value that is truthly
+// if no values found filter will return a empty array
+
+// let trr = [5, 4, 6, 3, 7, 8, 2];
+// let yrr = trr.filter((e) => {
+//     return e == 10
+// })
+// console.log(yrr);
+
+// let urr = ["h", "e", "l"]
+// urr = urr.filter((e) => {
+//     return e != "l"
+// })
+// console.log(urr);
+
+// let i = [
+//     { work: "hr", location: "pune" },
+//     { work: "admin", location: "chennai" },
+//     { work: "employee", location: "delhi" }
+// ]
+// let a = i.filter((e) => e.work == "admin");
+// console.log(a);
+
+
+// SOME
+// ṣome checks atleast one given condition is satisfied, stops the loop and return true
+
+// let srr = [20, 3, 5, 2, 7, 0];
+// let drr = srr.some((e) => {
+//     return e > 3
+// })
+// console.log(drr);
+
+// EVERY
+// every checks if all the given is true, even if one condition is true it will continue the loop and returns true only if all the given consition is satisfied
+
+// let frr = [5, 2, 4, 7, 6, 1];
+// let grr = frr.every((e) => e > 2)
+// console.log(grr);
