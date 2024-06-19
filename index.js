@@ -1,10 +1,10 @@
 // 27-05-2024
-let One = { a: 5, b: 2, c: 9, d: 7 };
-let Two = { e: 8, f: 3, g: 1, h: 4 };
-let op1 = 0;
-let op2 = 0;
-let Three = {};
-let Four = {};
+// let One = { a: 5, b: 2, c: 9, d: 7 };
+// let Two = { e: 8, f: 3, g: 1, h: 4 };
+// let op1 = 0;
+// let op2 = 0;
+// let Three = {};
+// let Four = {};
 
 // console.log(One);
 // console.log(Two);
@@ -747,69 +747,185 @@ let Four = {};
 // ********************************
 
 // 18-06-24
-// MAP
-// map returns a new array based on the execution of the given condition
-//
 
-// let qrr = [0, 9, 8, 7, 6, 5];
-// let wrr = qrr.map((e, i, o) => {
-//     // return e * 5
-//     return e != 7
+
+// MAP
+// map returns a new array
+// map iterates each element with the given condition
+
+// let qrr = [5, 3, 6, 8, 2, 3];
+// var wrr = qrr.map((e,i,o) => {
+//     return e*5
 // })
 // console.log(wrr);
 
-// returns truly
-// let err = ["a", "b", "c"];
-// let rrr = err.map((e) => {
-//     return e > 6
+// let rrr = qrr.map((e) => {
+//     return e > 5
 // })
 // console.log(rrr);
 
-// let prr = [0, 9, 8, 7, 6, 5]
-// let orr = prr.map((e, i) => {
-//     return { a: prr[i] }
-// })
-// console.log(orr);
-
-// FILTER
-// filter returns a new array
-// filter will check all the elements with the given condition
-// and returns all the value that is truthly
-// if no values found filter will return a empty array
-
-// let trr = [5, 4, 6, 3, 7, 8, 2];
-// let yrr = trr.filter((e) => {
-//     return e == 10
+// // returns boolean
+// let trr = [
+//     { id: 1, name: "admin", location: "chennai" },
+//     { id: 2, name: "admin", location: "chennai" },
+//     { id: 3, name: "admin", location: "chennai" },
+// ]
+// let yrr = trr.map((e) => {
+//     return e.id === 1
 // })
 // console.log(yrr);
 
-// let urr = ["h", "e", "l"]
-// urr = urr.filter((e) => {
-//     return e != "l"
+// FILTER
+// filter returns a new array
+// filter exeutes or checks all the element with the given condition and returns the filtered values
+
+// let urr = [1, 2, 3, 4, 5]
+// urr = urr.map((e) => e * 5)
+// let irr = urr.filter((e) => {
+//     return e > 10
 // })
 // console.log(urr);
+// console.log(irr);
 
-// let i = [
-//     { work: "hr", location: "pune" },
-//     { work: "admin", location: "chennai" },
-//     { work: "employee", location: "delhi" }
+// let orr = [
+//     { id: 1, name: "admin", location: "chennai" },
+//     { id: 2, name: "hr", location: "delhi" },
+//     { id: 3, name: "admin", location: "pune" },
+//     { id: 4, name: "admin", location: "mumbai" },
 // ]
-// let a = i.filter((e) => e.work == "admin");
-// console.log(a);
+// let prr = orr.filter((e) => e.name == "admin" && e.id > 2)
+// console.log(prr);
 
+// FIND
+// find returns a single element and stops the loop if the given condition is satisfied.
+
+// let arr = [
+//     { name: "admin", location: "pune" },
+//     { name: "admin", location: "hyderabad" },
+//     { name: "hr", location: "chennai" },
+//     { name: "employee", location: "chennai" },
+//     { name: "employee", location: "dubai" },
+// ]
+// let srr = arr.find((e) => {
+//     return e.name == "admin" && e.location == "hyderabad"
+//     return e.location == "chennai"
+//     return e.location == "chennai" && e.name == "admin"
+// })
+// console.log(srr);
+
+// SOME & EVERY returns boolean only
 
 // SOME
-// ṣome checks atleast one given condition is satisfied, stops the loop and return true
+// some returns boolean
+// some checks at least one element in the array statisfy the given condition and returns boolean
 
-// let srr = [20, 3, 5, 2, 7, 0];
-// let drr = srr.some((e) => {
-//     return e > 3
+// let drr = [3, 6, 7, 9, 2]
+// let frr = drr.some((e) => {
+//     // return e == 7
+//     return e > 5
 // })
-// console.log(drr);
+// console.log(frr);
 
 // EVERY
-// every checks if all the given is true, even if one condition is true it will continue the loop and returns true only if all the given consition is satisfied
+// every check if all the elements in the array statisfy the given condition and returns true
+// if even one element does not satisfy the condition it will return false
 
-// let frr = [5, 2, 4, 7, 6, 1];
-// let grr = frr.every((e) => e > 2)
-// console.log(grr);
+// let grr = [8, 3, 5, 2, 0]
+// let hrr = grr.every((e) => {
+//     return e > 2
+//     return e > 1
+// })
+// console.log(hrr);
+
+// REDUCE
+// reduce returns a single value output
+// let jrr = [1, 2, 3,4];
+// let krr = jrr.reduce((prev, curr) => {
+//     console.log("P: " + prev);
+//     console.log("C: " + curr);
+//     return prev + curr
+// })
+// console.log(krr);
+
+// let lrr = [1, 1, 1, 1, 2];
+// let zrr = lrr.reduce((prev, curr) => {
+//     return prev * curr
+// })
+// console.log(zrr);
+
+// 19-06-24
+
+// HOISTING
+// var x => declaration / declared
+// x = 10 => definition / defined
+
+// let, var, const
+
+// LET is local level scope
+
+// let does not support hoisting
+// let can be used in local scope only
+// let should be declared first => let x
+// and defined next => x = 20
+
+// error
+// x = 20;
+// let x
+// console.log(x);
+
+// function lets(a, b) {
+//     if (a == b) {
+//         let c = a + b
+//     }
+//     console.log(c);
+// }
+// lets(5, 5)
+
+// -------------------
+
+// VAR is a global scope
+// var supports hoisting
+
+// Hoisting
+// we can also define first y = 20
+// and then we can declare var y
+
+// function vars(a, b) {
+//     if (a == b) {
+//         c = a + b;
+//         var c
+//     }
+//     console.log(c);
+// }
+// vars(5, 5)
+
+// ---------------------
+
+// CONST
+
+// const is local scope
+
+// const should be declared and initialized
+// const zxy;
+// zxy = 10;
+
+// const values cannot be reasssigned
+// const xyz = 1;
+// xyz = 99
+// console.log(xyz);
+
+// function conts(a, b) {
+//     if (a != b) {
+//         const x = a + b
+//         console.log(x);
+//         const y;
+//         y = 20
+//     }
+// }
+// conts(10, 5)
+
+// object values can be re assigned because it is call by references
+// const data = {
+//     id: 1, name: "admin", location: "chennai"
+// }
+// console.log(data.id = 99);
