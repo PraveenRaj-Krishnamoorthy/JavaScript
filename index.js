@@ -929,3 +929,66 @@
 //     id: 1, name: "admin", location: "chennai"
 // }
 // console.log(data.id = 99);
+
+// 20-06-24
+
+// indexOf() can be used in arr of numbers, arr of boolean, arr of strings
+
+// indexof()
+// let x = "index"
+// console.log(x.indexOf("d"));
+
+// let y = [1, 2, 3, 4, 5];
+// console.log(y.indexOf(3));
+
+// ---------------------
+
+// settime out will execute only once after the given interval
+// var x = setTimeout(() => {
+//     console.log("Hello")
+// }, 1000);
+
+// setinterval exexutes again and again until the clearinterval()
+// setInterval(() => {
+//     console.log("Hello");
+// }, 500);
+
+// Task
+
+// var arr = [{ i: 2 }, { i: 3 }, { i: 4 }, { i: 6 }, { i: 9 }]
+// const main = () => {
+//     var crr = 0
+//     let x = setInterval(() => {
+//         console.log(arr[crr].i)
+//         if (arr[crr]["i"] == 4) {
+//             clearInterval(x)
+//         } else {
+//             crr++
+//         }
+//     }, 2000);
+// }
+// main()
+
+// callback
+// examples:-
+
+// function call(back) {
+//     back()
+// }
+// function blue() {
+//     console.log("yellow");
+// }
+// blue(call)
+
+// annomous parameter is passed in foreach function
+//  exam.forEach(()=>{})
+
+// we can also send like this below
+const exm = [1, 2, 3, 4, 5]
+paraName = (e, i, o) => {
+    console.log(e);
+}
+paraName()
+exm.forEach(paraName);
+
+// some error check later
