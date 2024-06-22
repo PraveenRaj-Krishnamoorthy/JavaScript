@@ -748,6 +748,7 @@
 
 // 18-06-24
 
+// map find filter should be stored in a varriable to access the values
 
 // MAP
 // map returns a new array
@@ -970,25 +971,29 @@
 // main()
 
 // callback
-// examples:-
 
-// function call(back) {
-//     back()
-// }
-// function blue() {
-//     console.log("yellow");
-// }
-// blue(call)
+// callback func is used to send a func as parameter to another function
+
+// examples:-
 
 // annomous parameter is passed in foreach function
 //  exam.forEach(()=>{})
 
 // we can also send like this below
-const exm = [1, 2, 3, 4, 5]
-paraName = (e, i, o) => {
-    console.log(e);
-}
-paraName()
-exm.forEach(paraName);
+// let arr = [1, 2, 3, 4, 5];
+// var param = (e, i, o) => {
+//     console.log(e);
+// }
+// arr.forEach(param);
 
-// some error check later
+// --------------------------
+
+// function myfn(callback) {
+//     callback()
+// }
+
+// function anotherfn() {
+//     console.log("This is a call back")
+// }
+
+// anotherfn(myfn)
