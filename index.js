@@ -997,3 +997,40 @@
 // }
 
 // anotherfn(myfn)
+
+// 24-06-24
+
+// var x = 10
+// var y = 20
+// function func() {
+//     let x = 30;
+//     let y = 40
+//     console.log(x, y);
+// }
+// func()
+// function Nfunc() {
+//     console.log(x, y);
+// }
+// Nfunc()
+
+// ---------------------
+
+// Change object values as an array
+// use object if it is an object iteration
+
+// ex:-
+
+// let cource = {
+//     one: "first",
+//     two: "second",
+//     three: "third",
+//     four: "fourth",
+//     five: "fifth"
+// }
+// let arr = []
+// for (var key in cource) {
+//     arr.push(cource[key])
+// }
+// console.log(arr);
+
+// ----------------------
