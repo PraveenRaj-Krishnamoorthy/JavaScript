@@ -1034,3 +1034,67 @@
 // console.log(arr);
 
 // ----------------------
+
+// 25-06-24
+
+// loop
+
+// do while executes the atleast once whether the conditon is T || F
+// let arr = [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }, { a: 5 }];
+// do {
+//     console.log(arr[i].a)
+//     if (arr[i].a === 4) {
+//         break
+//     } else {
+//         i++
+//     }
+// } while (i <= arr.length)
+
+// let y = 10
+// let i = 0
+// while (y != 0) {
+//     console.log(arr[i].a);
+//     i++
+// }
+
+// ----------------------------
+
+// converting object into array;
+
+// let obj = { a: 1, b: 2, c: 3, d: 4, e: 5 };
+// let z = [];
+// for (var key in obj) {
+//     // console.log(key);
+//     z.push({ [key]: obj[key] })
+// }
+// console.log(z);
+
+// ------------------------------
+
+// ternary operator is a single way expression.
+
+// null, undefined, "" are absense of values;
+// ( refer this for understanding let con = (!o) ? "value_iftrue -not empty" : "value_iffalse -empty")
+// let a = {};
+// // !a -> false
+// let b = null
+// // !b -> true
+// let c = undefined
+// // !c -> true
+// let d = ""
+// // !d -> true
+
+// let o = 0
+// let con = (o) ? "valueIf_true" : "valueIf_false"
+// console.log(con);
+
+// console.log(con)
+
+// side-effect expression
+// if (o) {
+//     console.log(": ", o);
+// } else {
+//     console.log(`It is empty ${o}`);
+// }
+
+// ***********************************
