@@ -1098,3 +1098,100 @@
 // }
 
 // ***********************************
+
+
+// 26-04-24
+
+
+// closure
+
+// closure is when a inner function is wrapped around an outer function, the inner function forms a closure
+// also able to access the outer fn variables even after the executin of outer fn
+
+// let fn = function outer() {
+//     var x = 10
+//     var y = 5
+//     function inner() {
+//         let d = x + y
+//         console.log(d);
+//         return d
+//     }
+//     console.log(inner);
+//     return inner
+// }
+
+// gives the instance of both outer and inner
+// fn
+
+// gives the instance of inner
+// fn()
+
+// returns the value
+// fn()()
+
+// returns inner fn instance
+// let z = fn()
+
+// returns inner value
+// z()
+
+// -------------------------
+
+// Promise
+
+// javascript is synchronous bcz it gets executed at the same time
+// promise is also synchronous but it is used to manage aynchronous operations
+// asynchronous operations happens in a different time
+
+// fr ex:-
+
+// function upload() {
+//     console.log("Uploading");
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             let isUpload = true
+//             if (isUpload) {
+//                 resolve()
+//             } else {
+//                 reject(new Error("Upload Failed"))
+//             }
+//         }, 1000);
+//     })
+// }
+
+// function publish() {
+//     console.log("Publishing");
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             let isPublish = false
+//             if (isPublish) {
+//                 resolve()
+//             } else {
+//                 reject(new Error("Publish failed"))
+//             }
+//         }, 2000);
+//     })
+// }
+
+// function notify() {
+//     console.log("Notification Sent");
+// }
+
+
+// upload().then((result) => {
+//     console.log("Upload done");
+//     return publish()
+// }).then((result) => {
+//     console.log("Publish done");
+//     return notify()
+// }).catch((err) => {
+//     console.log(err.message);
+// })
+
+// ---------------------------
+
+// call & apply
+// call is used to change the instance of the function by using comma
+// apply is also used to change the instance of the function by using array of values
+// both call and apply are similar
+
