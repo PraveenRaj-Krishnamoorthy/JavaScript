@@ -1191,7 +1191,17 @@
 // ---------------------------
 
 // call & apply
-// call is used to change the instance of the function by using comma
-// apply is also used to change the instance of the function by using array of values
+
+// call in js is used to invoke the value of this to the function.(this,arg1, arg2);
+//apply in js is used to involke the value of this to the function.(this,[arg1,arg2]);
 // both call and apply are similar
 
+// call also returns object
+// var person = {
+//     name: "Praveen Raj K",
+//     role: "MERN Stack",
+//     z: function () {
+//         return this
+//     }
+// }
+// person.call.z()
