@@ -1205,3 +1205,67 @@
 //     }
 // }
 // person.call.z()
+
+// try in console
+// var x = 1
+// var y = 1
+// const xyz = {
+//     x: 10,
+//     y: 20,
+//     z: function (x, y) {
+//         let d = this.x + this.y
+//         console.log(d);
+//     }
+// }
+
+// xyz.z.call(this, x, y)
+
+// Bind does not execures the function immediately when you call
+// instead it returns a new function with the this valus i.e the widnows this values 
+// to execute the function u should call it explicitly.
+
+// var x = 10
+// var y = 10
+// const xyz = {
+//     x: 1,
+//     y: 1,
+//     z: function (x, y) {
+//         var d = this.x + this.y
+//         console.log(d);
+//     }
+// }
+// // xyz.z.call(this, x, y)
+// console.log(xyz.z.bind(this, x, y));
+
+// 04-07-24
+
+// object values or attributes into array
+// let x = {a:1,b:2,c:3,d:4,e:5,f:6};const myarray = Object.values(x)
+// console.table(array) -> returns array and index in table format
+
+// call, apply, bind
+
+const books = {
+    title: "Making India Awesome",
+    author: "Chetan Bhagat"
+}
+
+// function info() {
+//     console.log(`This '${this.title}' was written by author ${this.author} `);
+// }
+
+// info.call(books)
+
+// function info(year) {
+//     console.log(`This '${this.title}' was written by author ${this.author} in the year '${year}' `);
+// }
+
+// info.apply(books, [1995])
+
+function info(year) {
+    console.log(`This '${this.title}' was written by author ${this.author} in the year '${year}' `);
+}
+
+var newInfo = info.bind(books, 1995);
+
+newInfo();
