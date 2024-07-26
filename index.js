@@ -1221,7 +1221,7 @@
 // xyz.z.call(this, x, y)
 
 // Bind does not execures the function immediately when you call
-// instead it returns a new function with the this valus i.e the widnows this values 
+// instead it returns a new function with the this valus i.e the widnows this values
 // to execute the function u should call it explicitly.
 
 // var x = 10
@@ -1245,10 +1245,13 @@
 
 // call, apply, bind
 
-const books = {
-    title: "Making India Awesome",
-    author: "Chetan Bhagat"
-}
+
+// some issue in the below code...
+
+// const books = {
+//     title: "Making India Awesome",
+//     author: "Chetan Bhagat"
+// }
 
 // function info() {
 //     console.log(`This '${this.title}' was written by author ${this.author} `);
@@ -1262,10 +1265,83 @@ const books = {
 
 // info.apply(books, [1995])
 
-function info(year) {
-    console.log(`This '${this.title}' was written by author ${this.author} in the year '${year}' `);
-}
+// function info(year) {
+//     console.log(`This '${this.title}' was written by author ${this.author} in the year '${year}' `);
+// }
 
-var newInfo = info.bind(books, 1995);
+// var newInfo = info.bind(books, 1995);
 
-newInfo();
+// newInfo();
+
+// --------------
+
+// 25-07-24
+
+// local storage vs session storage
+
+//  localstorage is a property of window object that allows to store data in key pair value
+// localstorage has no expiration time, stored datas can be available even after the browser is closed, or the system is restarted
+// localstorage is cleared mannualy.
+// if we want to store an object we should convert it first into a string using JSON.Stringify()
+
+// const details = { name: "Praveen Raj K", location: "Chennai", pincode: "600017" };
+
+// * we need to covert the object into a string to do so use JSON.Stringify(details)
+// const xyz = localStorage.setItem("myDetails", JSON.stringify(details));
+// var retrivedData = localStorage.getItem("myDetails");
+// to convert string of objects to plain object we can use JSON.parse("myDetails");
+// retrivedData = JSON.parse(retrivedData);
+
+// localStorage.clear(retrivedData)
+
+// ******************
+
+// all browser contains a global window property of object in javascript to keep js variables.
+// session storage are window property of browser.
+// similarly sessionStorage are also stored in browser memory location in key pair values.
+// session storage are cleared automatically when ever the browser or tab is closed or shutdown
+
+// var setIt = sessionStorage.setItem("myDetails", JSON.stringify(details));
+// var getIt = sessionStorage.getItem("myDetails");
+// getIt = JSON.parse(getIt);
+
+// sessionStorage.clear(getIt);
+
+// *******************
+
+// 26-07-24
+
+// bind this concept
+
+// bind returns a new instance or returns a new function.
+
+// var fname = "", mname = "RAJ", lname = "K";
+
+// // here this returns the object
+// const details = {
+//     fname: "PRAVEEN",
+//     mname: "RAJ",
+//     lname: "K",
+//     fullname: function () {
+//         return this.fname + " " + this.mname + " " + this.lname
+//     }
+// }
+
+// here this will retuns the windows this object, (i.e. it checks for the this variable in the window)
+// var x = details.fullname.bind(this);
+// x()
+
+// In normal function the this instance changes from where we call it.
+// below destructuring
+// var a = "A", b = "B"
+// const cars = {
+//     a: "audi",
+//     b: "benz",
+//     f: function (a, b) {
+//         return this.a + " " + this.b
+//     }
+// }
+
+// const { f } = cars
+// let y = f.bind(this);
+// console.log(y());
