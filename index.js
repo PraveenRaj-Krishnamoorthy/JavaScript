@@ -1315,9 +1315,7 @@
 
 // bind returns a new instance or returns a new function.
 
-// var fname = "", mname = "RAJ", lname = "K";
-
-// // here this returns the object
+// here this returns the object
 // const details = {
 //     fname: "PRAVEEN",
 //     mname: "RAJ",
@@ -1327,21 +1325,42 @@
 //     }
 // }
 
-// here this will retuns the windows this object, (i.e. it checks for the this variable in the window)
-// var x = details.fullname.bind(this);
-// x()
+// const { fname, mname, lname, fullname } = details;
 
-// In normal function the this instance changes from where we call it.
-// below destructuring
-// var a = "A", b = "B"
-// const cars = {
-//     a: "audi",
-//     b: "benz",
-//     f: function (a, b) {
-//         return this.a + " " + this.b
-//     }
-// }
+// // x returns new function or instance so the this is global need to bind details
+// var x = fullname.bind(details);
+// x();
 
-// const { f } = cars
-// let y = f.bind(this);
-// console.log(y());
+
+// 04-08-24
+// class
+class Parent {
+    constructor(names, areas, locations) {
+        this.names = names;
+        this.areas = areas;
+        this.locations = locations
+        this.dog = "myDog"
+    }
+    display() {
+        console.log(this.names, this.areas, this.locations, this.dog)
+    }
+}
+
+const parent = new Parent("Praveen Raj K", "T.nagar", "Chennai")
+
+// dont use when using child class
+// parent.display()
+
+class Child extends Parent {
+    constructor(childName, names, areas, locations) {
+        super(names, areas, locations)
+        this.childName = childName
+    }
+    info() {
+        console.log(this.childName)
+        return super.display()
+    }
+}
+const child = new Child("K Praveen Raj", "Praveen Raj K", "T.nagar", "locations")
+child.info();
+
